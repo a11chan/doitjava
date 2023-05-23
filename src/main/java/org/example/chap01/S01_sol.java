@@ -2,20 +2,19 @@ package org.example.chap01;
 
 import java.util.Scanner;
 
-public class S01 {
+public class S01_sol {
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int digit = scanner.nextInt();
-        int number = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        String sNum = sc.next();
 
-        String numberString = number + "";
-        char[] chars = numberString.toCharArray();
-
+        char[] cNum = sNum.toCharArray();
         int sum = 0;
-        for (int i = 0; i < chars.length ; i++) {
-            sum += chars[i] - '0';
-            System.out.println(sum);
+        for (int i = 0; i < cNum.length; i++) {
+            sum += cNum[i] - '0';
         }
+
         System.out.println("sum = " + sum);
     }
 }
